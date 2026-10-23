@@ -715,4 +715,4 @@ if quests then
     end
   end
 end
-pfQuestTurtleObjectiveFixes={version="1.0.0",candidateCount=685,applied=applied,skipped=skipped}
+pfQuestTurtleObjectiveFixes={version="1.0.1",candidateCount=685,applied=applied,skipped=skipped}

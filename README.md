@@ -19,11 +19,9 @@
 
 ## 修复内容
 
-部分 Turtle 扩展条目整体替换主库记录时缺少 `obj` 目标表，导致任务名字存在，却没有目标关联。本版对 **685 条经过筛选的遗漏记录**，恢复公开上游主库中已有的目标表，包括：
+部分 Turtle 扩展条目整体替换主库记录时遗漏了任务目标关联，可能出现任务已收录、地图却没有目标提示的情况。本项目针对这类数据遗漏，对 **685 条经过筛选的记录**恢复公开上游主库已有的目标表，改善任务目标的地图展示。
 
-- 猎虎：185、186、187、188。
-- 猎豹：190、191、192、193。
-- 猎龙：194、195、196、197。
+修复按任务数据和保护条件筛选；覆盖记录见 [upstream-provenance.json](upstream-provenance.json) 中的 `questIds`，具体任务用例保留在回归测试里。
 
 覆盖层在 Turtle 原有 `overwrites.lua` 之后、`patchtable.lua` 合并之前运行。只有条目仍然缺少目标表，且整条原始元数据与本版预期完全一致时才应用；已有目标、已删除条目以及后续修改过的元数据都会跳过。不会修改任务名称、已有中文文本、人物技能、服务器任务机制或玩家任务历史。
 
@@ -65,13 +63,13 @@ python -m unittest discover -s tests -v
 python tools/build_release.py
 ```
 
-测试覆盖真实上游合并逻辑、685 条目标表、狩猎三条任务链、已有目标保护、元数据变化保护、删除记录保护、重复加载和完整安装文件引用。测试使用 Lua 5.1 主机模拟；不替代所有 1.12.1 客户端的实机测试。
+测试覆盖真实上游合并逻辑、685 条目标表、代表性任务回归、已有目标保护、元数据变化保护、删除记录保护、重复加载和完整安装文件引用。测试使用 Lua 5.1 主机模拟；不替代所有 1.12.1 客户端的实机测试。
 
 问题反馈请提供任务 ID、任务阶段、客户端语言及插件版本。请勿上传账号密码、完整 WTF、私人聊天或数据库备份。
 
 ## English
 
-An unofficial ready-to-install pfQuest + pfQuest-turtle bundle, with a conservative overlay restoring 685 independently checked whole-objective omissions using **only public upstream objective data**. Runtime guards skip existing objectives, deletions and unexpected metadata. The Tiger, Panther and Raptor Mastery chains are included.
+An unofficial ready-to-install pfQuest + pfQuest-turtle bundle, with a conservative overlay restoring 685 independently checked whole-objective omissions using **only public upstream objective data**. Runtime guards skip existing objectives, deletions and unexpected metadata. The repair scope is data-driven; the full record list is available in the source manifest.
 
 Download the `-full.zip` release, close the client, back up the two addon folders, replace them inside `Interface/AddOns`, enable both addons, then restart the client. No server change is required. The `-patch.zip` supports existing installations without replacing their TOC wholesale.
 

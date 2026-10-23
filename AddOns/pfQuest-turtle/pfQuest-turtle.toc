@@ -4,7 +4,7 @@
 ## Contributors: Gurky, Antealis, HumbleKagu, KasVital, Haaxor1689, IcemanHHW, fatpowaranga
 ## Notes: A TurtleWoW DB extension for pfQuest
 ## Version: GIT
-## X-ObjectiveFixes-Version: 1.0.0
+## X-ObjectiveFixes-Version: 1.0.1
 ## Dependencies: pfQuest
 ## SavedVariables: pfQuest_turtlecount
 

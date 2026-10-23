@@ -12,7 +12,7 @@
     "archiveSha256": "13faa8762390524b65bd8f8efa217524fb5332152490bb9ca5dfa1fa96e51388"
   },
   "patch": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "candidateCount": 685,
     "questIds": [
       10,
