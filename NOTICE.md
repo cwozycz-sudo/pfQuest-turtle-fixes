@@ -20,3 +20,5 @@ Additional repair overlay, packaging, documentation and tests: Copyright (c) 202
 No client executables, MPQ/DBC game assets, server binaries, private database exports, credentials, personal profiles or server-specific quest texts are included. The bundle contains public addon files from the commits listed in `upstream-provenance.json`; it does not assert new rights over third-party game assets or trademarks.
 
 This is a community modification and is not endorsed by Shagu, txtsd, The-Kludge-Bureau, TurtleWoW or Blizzard. Bug reports about this overlay belong in this repository, not automatically in an upstream project's tracker.
+
+Optional availability module and its regression tests: Copyright (c) 2026 cwozycz-sudo, MIT licensed under the root LICENSE. No private server condition export is included.

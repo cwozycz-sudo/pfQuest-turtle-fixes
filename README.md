@@ -4,6 +4,10 @@
 
 提供可直接安装的 **pfQuest + pfQuest-turtle 完整包**，以及已有用户使用的补丁包。原作者、维护者和许可证见 [NOTICE.md](NOTICE.md)。本项目不是官方 TurtleWoW 或 pfQuest 发布。
 
+## 2026-10-27 可选修复
+
+新增[可接任务判断与历史同步模块](optional/availability/README.md)，包括源码和 Lua 5.1 回归测试。服务器专用条件数据不公开打包；默认保留原筛选，仅提供手动历史同步修复。该模块尚未纳入旧 Releases 安装包，安装方法和限制见链接。
+
 ## 下载与安装（普通玩家）
 
 前往 [Releases](https://github.com/cwozycz-sudo/pfQuest-turtle-fixes/releases/latest)，下载名称以 `-full.zip` 结尾的文件。
